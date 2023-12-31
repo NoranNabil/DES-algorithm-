@@ -380,7 +380,7 @@ void rotate(DATA *Key,uint8 round,DATA *sub_key){
 		Key->Array[3] |= (uint8)((Temp)>>28); 
 		Temp <<=4;
 		for (i = 4 ; i<8 ; i++){
-			Key->Array[i]= (uint8)((Temp >> ((7-i)*8)) & 0x000000ff); 
+			Key->Array[i]= (uint8)((Temp >> ((7-i)*8)) & 0x000000ff);} 
 	}
 
 	sub_key->Half[1] = Key->Half[1];
